@@ -32,9 +32,7 @@ describe("Given a GraffitiCard component", () => {
 
       expect(graffitiCard).toHaveTextContent(graffitiTitle);
     });
-    test("And it should show a button with text 'DELETE'", async () => {
-      const textButton = "DELETE";
-
+    test("And it should show a button for delete the Graffiti Card", async () => {
       renderWithProviders(
         <GraffitiCard
           image={mockGraffiti[0].image}
@@ -43,7 +41,7 @@ describe("Given a GraffitiCard component", () => {
         />
       );
 
-      const button = screen.queryByRole("button", { name: textButton })!;
+      const button = screen.queryByRole("button");
       await userEvent.click(button!);
 
       expect(button).toBeInTheDocument();

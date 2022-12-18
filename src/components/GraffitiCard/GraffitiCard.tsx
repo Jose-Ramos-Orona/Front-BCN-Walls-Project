@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Trash } from "iconoir-react";
 import useGraffiti from "../../hooks/useGraffiti/useGraffiti";
 import Button from "../Button/Button";
 import GraffitiCardStyled from "./GraffitiCardStyled";
@@ -27,7 +28,8 @@ const GraffitiCard = ({ title, image, id }: GraffitiCardProps): JSX.Element => {
       <h2 className="graffiti-card__title">{title}</h2>
       <Button
         buttonType="small"
-        text="DELETE"
+        text={<Trash />}
+        aria-label="delete a graffiti card"
         action={() => deleteGraffiti(id)}
       />
     </GraffitiCardStyled>
