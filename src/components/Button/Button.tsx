@@ -2,7 +2,7 @@ import ButtonStyled from "./ButtonStyled";
 
 interface ButtonProps {
   buttonType: "small" | "big" | "form";
-  text: string;
+  text: any;
   action?: () => void;
 }
 
