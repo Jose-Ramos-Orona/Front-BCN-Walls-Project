@@ -15,12 +15,14 @@ const NavigationBar = (): JSX.Element => {
 
   return (
     <NavigationBarStyled className="container">
-      <Button
-        text={<Menu />}
-        aria-label="open menu"
-        buttonType="small"
-        action={toggleMenu}
-      />
+      {!isMenuOpen && (
+        <Button
+          text={<Menu />}
+          aria-label="open menu"
+          buttonType="small"
+          action={toggleMenu}
+        />
+      )}
       {isMenuOpen && (
         <div className="popover">
           <div className="content">

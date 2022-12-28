@@ -16,11 +16,7 @@ const NavigationBarStyled = styled.div`
   }
 
   .popover {
-    position: absolute;
-    right: 0;
-    top: -95px;
     width: 100%;
-    height: 100%;
     display: flex;
     text-transform: uppercase;
     align-items: center;
@@ -32,8 +28,6 @@ const NavigationBarStyled = styled.div`
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 0;
-    height: 0;
     color: ${(props) => props.theme.colors.secondary};
     background-color: ${(props) => props.theme.colors.primary};
     animation: 300ms grow ease forwards;
@@ -83,7 +77,7 @@ const NavigationBarStyled = styled.div`
 
   .popover .close {
     right: 0;
-    top: 0;
+    bottom: 0;
     width: 50px;
     height: 50px;
     position: absolute;
@@ -101,7 +95,7 @@ const NavigationBarStyled = styled.div`
   @keyframes grow {
     100% {
       height: 35%;
-      width: 60%;
+      width: 100%;
     }
   }
 
