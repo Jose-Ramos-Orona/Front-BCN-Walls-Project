@@ -20,7 +20,7 @@ const NavigationBar = (): JSX.Element => {
           text={<Menu />}
           aria-label="open menu"
           buttonType="small"
-          action={toggleMenu}
+          action={() => toggleMenu()}
         />
       )}
       {isMenuOpen && (
