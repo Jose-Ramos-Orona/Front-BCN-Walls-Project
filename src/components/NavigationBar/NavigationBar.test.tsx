@@ -9,7 +9,6 @@ import NavigationBar from "./NavigationBar";
 describe("Given a NavigationBar component", () => {
   describe("When it is rendered and the user is not Logged", () => {
     test("Then it should show trhee anchor links with the texts 'Home','Register' and 'Login'", async () => {
-      const menuText = "MENU";
       const homeText = "Home";
       const registerText = "Register";
       const loginText = "Login";
@@ -22,7 +21,7 @@ describe("Given a NavigationBar component", () => {
         },
       });
 
-      const menuLink = screen.queryByRole("button", { name: menuText });
+      const menuLink = screen.queryByRole("button");
       await userEvent.click(menuLink!);
       const registerLink = screen.queryByRole("link", { name: registerText });
       const loginLink = screen.queryByRole("link", { name: loginText });
@@ -37,7 +36,6 @@ describe("Given a NavigationBar component", () => {
 
   describe("When it is rendered and the user is Logged", () => {
     test("Then it should show trhee anchor links with the texts 'Home' and 'Create'", async () => {
-      const menuText = "MENU";
       const homeText = "Home";
       const creationText = "Create";
 
@@ -49,7 +47,7 @@ describe("Given a NavigationBar component", () => {
         },
       });
 
-      const menuLink = screen.queryByRole("button", { name: menuText });
+      const menuLink = screen.queryByRole("button");
       await userEvent.click(menuLink!);
       const homeLink = screen.queryByRole("link", { name: homeText });
       const createLink = screen.queryByRole("link", { name: creationText });

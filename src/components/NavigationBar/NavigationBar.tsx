@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Button from "../Button/Button";
 import NavigationBarStyled from "./NavigationBarStyled";
-import { Cancel } from "iconoir-react";
+import { Cancel, Menu } from "iconoir-react";
 import { useAppSelector } from "../../redux/hooks";
 
 const NavigationBar = (): JSX.Element => {
@@ -15,7 +15,12 @@ const NavigationBar = (): JSX.Element => {
 
   return (
     <NavigationBarStyled className="container">
-      <Button text="MENU" buttonType="small" action={toggleMenu} />
+      <Button
+        text={<Menu />}
+        aria-label="open menu"
+        buttonType="small"
+        action={toggleMenu}
+      />
       {isMenuOpen && (
         <div className="popover">
           <div className="content">

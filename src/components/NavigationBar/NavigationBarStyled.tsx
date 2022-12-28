@@ -8,6 +8,13 @@ const NavigationBarStyled = styled.div`
   scroll-behavior: smooth;
   background: ${(props) => props.theme.colors.primary};
 
+  .button {
+    display: block;
+    padding: 10px;
+    background: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.secondary};
+  }
+
   .popover {
     position: absolute;
     right: 0;
